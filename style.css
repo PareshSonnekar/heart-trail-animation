@@ -1,0 +1,44 @@
+body{
+
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+span{
+
+    height: 100px;
+    width: 100px;
+    background : url(https://cdn3.iconfinder.com/data/icons/object-emoji/50/Heart-64.png);
+    position: absolute;
+    background-size: cover; 
+    /* write this above background-size property below that position property only then it would work */
+    top: 50%;
+    left: 50%;
+    /* the above top will be making the span in the center and the below line of code will be aligning that pic inside of that span in the exact center  */
+    
+    transform: translate(-50%,-50%);
+
+    animation: animate 6s linear;
+    
+}
+
+@keyframes animate {
+ 
+     0%{
+
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+     }
+
+     100%{
+
+        transform: translate(-50%,-5000%); 
+        opacity: 1;
+        /* -5000% for y-coordinate used tp send that span out of the screen and going from top  */
+        filter: hue-rotate(720deg); 
+    
+    }
+
+}
